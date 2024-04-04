@@ -18,6 +18,12 @@ int main() {
                 if(p2 >= 37 && p3 >= 37){
                     printf("E");
                 }
+                else{
+                    printf("N");
+                }
+            }
+            else{
+                printf("N");
             }
         }
         else if(g2 == 'N'){
@@ -25,6 +31,12 @@ int main() {
                 if(p1 >= 37 && p3 >= 37){
                     printf("E");
                 }
+                else{
+                    printf("N");
+                }
+            }
+            else{
+                printf("N");
             }
         }
         else if(g3 == 'N'){
@@ -32,6 +44,12 @@ int main() {
                 if(p1 >= 37 && p2 >= 37){
                     printf("E");
                 }
+                else{
+                    printf("N");
+                }
+            }
+            else{
+                printf("N");
             }
         }
         else if(p1 >= 37 && p2 >= 37){
