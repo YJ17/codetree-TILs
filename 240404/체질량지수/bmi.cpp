@@ -8,9 +8,9 @@ int main() {
 
     scanf("%d %d", &h, &w);
 
-    printf("%d", (h*h)/(10000*w));
+    printf("%d", (10000*w)/(h*h));
 
-    if(25 <= (h*h)/(10000*w)){
+    if(25 <= (10000*w)/(h*h)){
         printf("\nObesity");
     }
 
