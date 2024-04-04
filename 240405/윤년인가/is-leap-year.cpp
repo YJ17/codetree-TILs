@@ -7,7 +7,7 @@ int main() {
 
     scanf("%d", &y);
 
-    if(y % 4 == 1 || y % 100 == 0 && y % 400 == 1){
+    if(y % 4 != 0 || y % 100 == 0 && y % 400 != 0){
         printf("false");
     }
     else {
