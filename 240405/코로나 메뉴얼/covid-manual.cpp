@@ -21,7 +21,7 @@ int main() {
             printf("V");
         }
     }
-    else if(g2 == 'Y' && p2 >= 37 || g3 == 'Y' && p3 >= 37){
+    else if(g2 == 'Y' && p2 >= 37 && g3 == 'Y' && p3 >= 37){
             printf("E");
     }
     else{
