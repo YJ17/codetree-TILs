@@ -9,7 +9,7 @@ int main() {
 
     printf("%d", n*n);
 
-    if(n*n < 5){
+    if(n < 5){
         printf("\ntiny");
     }
 
