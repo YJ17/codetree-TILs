@@ -7,13 +7,13 @@ int main() {
 
     scanf("%d", &a);
 
-    if(3 <= a <= 5){
+    if(3 <= a && a <= 5){
         printf("Spring");
     }
-    else if(6 <= a <= 8){
+    else if(6 <= a && a <= 8){
         printf("Summer");
     }
-    else if(9 <= a <= 11){
+    else if(9 <= a && a <= 11){
         printf("Fall");
     }
     else {
