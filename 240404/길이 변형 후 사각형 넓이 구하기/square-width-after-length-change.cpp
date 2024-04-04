@@ -9,7 +9,7 @@ int main() {
     scanf("%d %d", &x, &y);
     
     x += 8;
-    y += 3;
+    y *= 3;
 
     printf("%d\n%d\n%d", x, y, x*y);
 
