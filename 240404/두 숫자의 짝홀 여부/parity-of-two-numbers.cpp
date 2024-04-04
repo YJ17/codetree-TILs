@@ -12,14 +12,14 @@ int main() {
         printf("even\n");
     }
     else {
-        printf("add\n");
+        printf("odd\n");
     }
 
     if(b % 2 == 0){
         printf("even\n");
     }
     else {
-        printf("add\n");
+        printf("odd\n");
     }
 
     return 0;
