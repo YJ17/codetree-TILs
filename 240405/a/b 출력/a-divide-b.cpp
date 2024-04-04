@@ -17,7 +17,8 @@ int main() {
     while(i <= 20){
         
         printf("%d", r/b);
-        r = ((r%b)*10)/b;
+    
+        r = ((r%b)*10);
         i++;
     }
 
