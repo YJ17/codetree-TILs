@@ -33,6 +33,11 @@ int main() {
             }
         }
     }
+    else if(g1 == 'Y' && g2 == 'Y' && g3 == 'Y'){
+        if(p1 >= 37 && p2 >= 37 && p3 >= 37){
+            printf("E");
+        }
+    }
     else{
         printf("N");
     }
