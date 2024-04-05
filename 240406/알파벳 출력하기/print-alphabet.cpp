@@ -13,7 +13,7 @@ int main() {
             if(i >= j){
                 printf("%c", (char)c);
                 c++;
-                if(c >= (int)'Z'){
+                if(c > (int)'Z'){
                     c = (int)'A';
                 }
             }
