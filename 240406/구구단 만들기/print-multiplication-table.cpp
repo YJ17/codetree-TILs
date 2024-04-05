@@ -9,9 +9,9 @@ int main() {
     scanf("%d %d", &a, &b);
 
     for(int i = 1; i <= 9; i++){
-        for(int j = b; j >= 2; j-=2){
+        for(int j = b; j >= a; j-=2){
             printf("%d * %d = %d", j, i, j*i);
-            if(j > 2){
+            if(j > a){
                 printf(" / ");
             }
         }
