@@ -5,20 +5,20 @@ int main() {
 
     int arr[10];
     int sum = 0;
-    int c;
+    int c = 0;
 
     for(int i = 0; i < 10; i++){
         scanf("%d", &arr[i]);
+        sum += arr[i];
         c++;
         if(arr[i] >= 250){
-            for(int j = 0; j < i; j++){
-                sum += arr[j];
-            }
+            sum -= arr[i];
+            c--;
             break;
         }
     }
 
-    printf("%d %0.1f", sum, (float)sum/(c-1));
+    printf("%d %0.1f", sum, (float)sum/c);
 
     return 0;
 }
