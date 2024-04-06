@@ -6,7 +6,7 @@ int main() {
     int arr[11];
     int i = 0;
 
-    for(i; i < 9; i++){
+    for(i; i < 10; i++){
         scanf("%d", &arr[i]);
         if(arr[i] == 0){
             break;
