@@ -22,10 +22,10 @@ int main() {
     }
 
     if(((sum3/c3) * 100) % 10 >= 5){
-        avg = sum3/c3 + 0.1;
+        avg = (float)sum3/c3 + 0.1;
     }
     else{
-        avg = sum3/c3;
+        avg = (float)sum3/c3;
     }
 
     printf("%d %0.1f", sum2, avg);
