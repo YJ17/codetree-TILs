@@ -6,6 +6,7 @@ int main() {
     float arr[100];
     int n;
     float sum = 0;
+    float avg = 0;
 
     scanf("%d", &n);
 
@@ -14,7 +15,12 @@ int main() {
         sum += arr[i];
     }
 
-    printf("%0.1f\n", sum/n);
+    if((sum/n) * 100 / 10 >= 5){
+        printf("%0.1f\n", sum/n + 0.01);
+    }
+    else {
+        printf("%0.1f\n", sum/n);
+    }
 
     if(sum/n >= 4.0){
         printf("Perfect");
