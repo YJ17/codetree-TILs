@@ -7,7 +7,7 @@ int main() {
     int sum = 0;
     int c = 0;
 
-    for(int i = 0; i < 9; i++){
+    for(int i = 0; i <= 9; i++){
         scanf("%d", &n);
         if(n != 0){
             sum += n;
