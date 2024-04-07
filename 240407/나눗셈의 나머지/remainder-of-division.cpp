@@ -10,14 +10,14 @@ int main() {
 
     scanf("%d %d", &a, &b);
 
-    while(a >= 1){
-        arr[a % b] = a % b;
+    while(a > 1){
+        arr[a % b] += 1;
         a /= b;
     }
 
     for(int i = 0; i <= 10; i++){
         if(arr[i] != 0){
-            s = arr[i] * arr[i];
+            s = s + arr[i] * arr[i];
         }
     }
 
