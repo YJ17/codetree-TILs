@@ -5,7 +5,7 @@ int main() {
 
     int a;
     int b;
-    int arr[10] = {};
+    int arr[11] = {};
     int s = 0;
 
     scanf("%d %d", &a, &b);
@@ -15,7 +15,7 @@ int main() {
         a /= b;
     }
 
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i <= 10; i++){
         if(arr[i] != 0){
             s = arr[i] * arr[i];
         }
