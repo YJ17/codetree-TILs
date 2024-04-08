@@ -6,8 +6,8 @@ int main() {
 
     char a[101];
 
-    // fgets(a, 101, stdin);
-    scanf("%[^\n]", a);
+    fgets(a, 101, stdin);
+    // scanf("%[^\n]", a);
 
     for(int i = 2; i < 10; i++){
         printf("%c", a[i]);
