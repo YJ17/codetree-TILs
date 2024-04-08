@@ -34,6 +34,10 @@ int main() {
         }
     }
 
+    if(n == 1){
+        t = true;
+    }
+
     if(t == true){
         printf("%d", max);
     }
