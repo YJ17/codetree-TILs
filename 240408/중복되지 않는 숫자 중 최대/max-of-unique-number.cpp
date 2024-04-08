@@ -36,6 +36,7 @@ int main() {
 
     if(n == 1){
         t = true;
+        max = arr[0];
     }
 
     if(t == true){
