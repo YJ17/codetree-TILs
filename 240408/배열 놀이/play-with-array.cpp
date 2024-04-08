@@ -28,10 +28,9 @@ int main() {
         else if(t == 2){
             scanf("%d", &b);
             for(int k = 0; k < n; k++){
-                if(arr[k] == b){
+                if(arr[k] == b && count == 0){
                     printf("%d\n", k+1);
                     count++;
-                    break;
                 }
             }
             if(count == 0){
