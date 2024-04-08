@@ -5,9 +5,7 @@ int main() {
 
     int n;
     int arr[101];
-    int brr[101];
-    int t = 0;
-    int max = 0;
+    int temp = 0;
 
     scanf("%d", &n);
 
@@ -15,20 +13,18 @@ int main() {
         scanf("%d ", &arr[i]);
     }
 
-    for (int i = 0; i < 2; i++){
-        for(int j = 0; j < n; j++){
-            if(arr[j] > max){
-                max = arr[j];
-                t = j;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n - 1; j++){
+            if(arr[j] < arr[j + 1]){
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
         }
-        brr[i] = max;
-        arr[t] = 0;
-        max = 0;
-        t = 0;
-    }
+    }    
 
-    printf("%d %d", brr[0], brr[1]);
+    printf("%d %d", arr[0], arr[1]);
+
 
     return 0;
 }
