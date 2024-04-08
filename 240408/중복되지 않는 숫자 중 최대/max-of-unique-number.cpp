@@ -21,7 +21,8 @@ int main() {
                 bb[i] = 1;
                 bb[j] = 1;
             }
-            else if(bb[j] != 1) {
+            else if(bb[j] != 1 && bb[i] != 1) {
+                bb[i] = 2;
                 bb[j] = 2;
             }
         }
