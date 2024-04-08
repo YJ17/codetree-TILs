@@ -13,12 +13,6 @@ int main() {
 
     scanf("%d %d", &n, &m);
 
-    if(n == 1){
-        for(int i = 1; i <= m; i++){
-            printf("%d ", i);
-        }
-    }
-
     while(n != 1){
         arr[i][j] = num;
         num++;
@@ -54,12 +48,18 @@ int main() {
         }
     }
 
-
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < m; j++){
-            printf("%d ", arr[i][j]);
+    if(n == 1){
+        for(int i = 1; i <= m; i++){
+            printf("%d ", i);
         }
-        printf("\n");
+    }
+    else{
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                printf("%d ", arr[i][j]);
+            }
+            printf("\n");
+        }
     }
 
 
