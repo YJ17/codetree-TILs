@@ -36,6 +36,7 @@ int main() {
             if(count == 0){
                 printf("0\n");
             }
+            count = 0;
         }
         else {
             scanf("%d %d", &s, &e);
