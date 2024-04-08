@@ -16,7 +16,6 @@ int main() {
     while(1){
         arr[i][j] = num;
         num++;
-        printf("arr[%d][%d] = %d   c = %d\n", i, j, num-1, c);
         if(i == n-1 && j == m-1){
             break;
         }
