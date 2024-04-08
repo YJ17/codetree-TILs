@@ -12,10 +12,10 @@ int main() {
         if(c == 999 || c == -999){
             break;
         }
-        else if(c > max){
+        if(c > max){
             max = c;
         }        
-        else if(c < min){
+        if(c < min){
             min = c;
         }
     }
