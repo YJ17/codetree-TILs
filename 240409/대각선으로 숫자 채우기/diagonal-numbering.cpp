@@ -13,7 +13,7 @@ int main() {
 
     scanf("%d %d", &n, &m);
 
-    while(n != 1){
+    while(n != 1 && m != 1){
         arr[i][j] = num;
         num++;
         if(i == n-1 && j == m-1){
@@ -51,6 +51,11 @@ int main() {
     if(n == 1){
         for(int i = 1; i <= m; i++){
             printf("%d ", i);
+        }
+    }
+    else if(m == 1){
+        for(int i = 1; i < n; i++){
+            printf("%d\n", i);
         }
     }
     else{
