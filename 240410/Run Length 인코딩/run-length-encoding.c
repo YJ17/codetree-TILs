@@ -28,14 +28,14 @@ int main() {
     
     int j = 0;
     for(int i = 0; i < c_i; i++){
-        if(count[i] > 9){
-            j += 2;
+        if(count[i] > 999){
+            j += 4;
         }
         else if(count[i] > 99){
             j += 3;
         }
-        else if(count[i] > 999){
-            j += 4;
+        else if(count[i] > 9){
+            j += 2;
         }
         else {
             j += 1;
