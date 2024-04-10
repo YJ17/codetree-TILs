@@ -16,7 +16,7 @@ int main() {
 
     while (st == false) {
         sq = false;
-        for (int i = 0; i < strlen(a); i++) {
+        for (int i = 0; i <= strlen(a); i++) {
             if (sq == false) {
                 for (int j = 0; j < strlen(b); j++) {
                     if (a[i + j] == b[j]) {
