@@ -8,7 +8,7 @@ int main() {
 
     scanf("%s", arr);
 
-    for(int i = strlen(arr); i >= 0; i--){
+    for(int i = strlen(arr) - 1; i >= 0; i--){
         if(i % 2 != 0){
             printf("%c", arr[i]);
         }
