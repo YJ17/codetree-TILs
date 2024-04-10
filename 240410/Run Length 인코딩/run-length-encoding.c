@@ -25,8 +25,18 @@ int main() {
             c_i++;
         }
     }
-
-    printf("%d\n", strlen(alph) * 2);
+    
+    int j = 0;
+    for(int i = 0; i < c_i; i++){
+        if(count[i] > 9){
+            j += 2;
+        }
+        else {
+            j += 1;
+        }
+    }
+    printf("%d\n", strlen(alph) + j);
+    
     for(int i = 0; i < c_i; i++){
         printf("%c", alph[i]);
         printf("%d", count[i]);
