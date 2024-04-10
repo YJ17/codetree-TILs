@@ -13,17 +13,18 @@ int main() {
     scanf("%s", n);
     scanf("%s", m);
 
-    for(int i = 0; i < strlen(n) - 1; i++){
-        for(int j = 0; j < strlen(m) - 1; j++){
+    for(int i = 0; i < strlen(n) - (strlen(m) - 1); i++){
+        for(int j = 0; j < strlen(m); j++){
             if(n[i + j] == m[j]){
                 c++;
             }
         }
         if(c == strlen(m)){
+            ri = i;
             t = 0;
-            ri = i - (strlen(m) - 1);
             break;
         }
+        c = 0;
     }
 
     if(t != -1){
