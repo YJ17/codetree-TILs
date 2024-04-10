@@ -20,11 +20,9 @@ int main() {
         scanf("%d ", &t);
         if(t == 1){
             scanf("%d %d", &a, &b);
-            for(int j = 0; j < strlen(s); j++){
-                temp = s[b - 1];
-                s[b - 1] = s[a - 1];
-                s[a - 1] = temp;
-            }
+            temp = s[b - 1];
+            s[b - 1] = s[a - 1];
+            s[a - 1] = temp;
             printf("%s\n", s);
         }
         else {
