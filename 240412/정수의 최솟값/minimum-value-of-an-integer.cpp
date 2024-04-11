@@ -1,14 +1,21 @@
 #include <iostream>
 
 int Min3(int a, int b, int c){
-    if(a >= b && b >= c){
-        return c;
-    }
-    else if(a >= c && c >= b){
-        return b;
+    if(a <= b){
+        if(a <= c){
+            return a;
+        }
+        else {
+            return c;
+        }
     }
     else {
-        return a;
+        if(b <= c){
+            return b;
+        }
+        else {
+            return c;
+        }
     }
 }
 
