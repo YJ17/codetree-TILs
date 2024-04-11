@@ -2,7 +2,7 @@
 
 void MinMulty(int n, int m){
     if(n > m){
-        for(int i = n; i < n * m; i++){
+        for(int i = n; i <= n * m; i++){
             if(i % n == 0 && i % m == 0){
                 printf("%d", i);
                 break;
@@ -10,7 +10,7 @@ void MinMulty(int n, int m){
         }
     }
     else {
-         for(int i = m; i < n * m; i++){
+         for(int i = m; i <= n * m; i++){
             if(i % n == 0 && i % m == 0){
                 printf("%d", i);
                 break;
