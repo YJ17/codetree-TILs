@@ -8,7 +8,10 @@ bool IsRightDate(bool st, int m, int d) {
     else if (st && m == 2 && d > 29) {
         return false;
     }
-    else if ((m == 2 || m == 4 || m == 6 || m == 9 || m == 11) && d > 30) {
+    else if(m == 2 && d > 28){
+        return false;
+    }
+    else if ((m == 4 || m == 6 || m == 9 || m == 11) && d > 30) {
         return false;
     }
     return true;
