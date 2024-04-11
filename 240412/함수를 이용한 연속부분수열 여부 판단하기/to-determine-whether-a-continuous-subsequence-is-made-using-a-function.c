@@ -3,7 +3,7 @@
 
 bool IsBubun(int n1, int n2, char a[], char b[]){
     int c = 0;
-    for(int i = 0; i < n1 - n2; i++){
+    for(int i = 0; i <= n1 - n2; i++){
         for(int j = 0; j < n2; j++){
             if(a[i + j] == b[j]){
                 c++;
