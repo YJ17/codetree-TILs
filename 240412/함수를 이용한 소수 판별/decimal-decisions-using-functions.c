@@ -19,7 +19,7 @@ int main() {
     scanf("%d %d", &a, &b);
 
     for(int i = a; i <= b; i++){
-        if(IsSosu(i)){
+        if(i != 1 && IsSosu(i)){
             sum += i;
         }
     }
