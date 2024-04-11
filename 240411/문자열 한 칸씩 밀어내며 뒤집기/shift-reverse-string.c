@@ -4,8 +4,8 @@
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    char arr[1001];
-    char rev[1001];
+    char arr[2000];
+    char rev[2000];
     char temp;
     int qn;
     int q;
