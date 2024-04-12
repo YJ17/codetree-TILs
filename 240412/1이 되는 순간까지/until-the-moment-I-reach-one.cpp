@@ -1,21 +1,16 @@
 #include <iostream>
 
-int c;
-
 int UntilOne(int n){
     if(n == 1){
         return 0;
     }
 
     if(n % 2 == 0){
-        UntilOne(n / 2);
-        c++;
+        return UntilOne(n / 2) + 1;
     }
     else {
-        UntilOne(n / 3);
-        c++;
+        return UntilOne(n / 3) + 1;
     }
-    return c;
 }
 
 int main() {
