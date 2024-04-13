@@ -1,22 +1,16 @@
 #include <stdio.h>
 
-int count = 0;
-
 int HowManyRepeat(int n){
     if(n == 1){
         return 0;
     }
 
     if(n % 2 == 0){
-        count++;
-        HowManyRepeat(n / 2);
+        return HowManyRepeat(n / 2) + 1;
     }
-    else {
-        count++;   
-        HowManyRepeat(n * 3 + 1);
+    else {  
+        return HowManyRepeat(n * 3 + 1) + 1;
     }
-
-    return count;
 }
 
 int main() {
