@@ -8,6 +8,7 @@ int main() {
 
     string a, b;
     int count = 0;
+    bool poss = false;
 
     cin >> a >> b;
 
@@ -16,14 +17,15 @@ int main() {
         count++;
         if(a == b){
             break;
+            poss = true;
         }
     }
 
-    if(count == 0){
-        cout << -1;
+    if(poss == true){
+        cout << count;
     }
     else {
-        cout << count;
+        cout << -1;
     }
 
     return 0;
