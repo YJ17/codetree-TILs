@@ -19,7 +19,7 @@ int main() {
 
     cout << count - 1 << endl;
 
-    for(int i = 0; i < count; i++){
+    for(int i = 0; i < count - 1; i++){
         if(i % 2 == 0){
             cout << t[i] << endl;
         }
