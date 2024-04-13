@@ -16,8 +16,8 @@ int main() {
         a = a.substr(a.length()-1, 1) + a.substr(0, a.length()-1);
         count++;
         if(a == b){
-            break;
             poss = true;
+            break;
         }
     }
 
