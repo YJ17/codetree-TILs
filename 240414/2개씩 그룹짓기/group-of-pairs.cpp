@@ -8,8 +8,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     int n, max = -1;
-    int arr[1001];
-    int sort_g[1001];
+    int arr[1050];
 
     cin >> n;
 
