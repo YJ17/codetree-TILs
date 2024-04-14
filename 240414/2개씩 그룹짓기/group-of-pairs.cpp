@@ -8,7 +8,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     int n, max = -1;
-    int arr[1050];
+    int arr[1000];
 
     cin >> n;
 
@@ -16,7 +16,7 @@ int main() {
         cin >> arr[i];
     }
 
-    sort(arr, arr + 2 * n);
+    sort(arr, arr + (2 * n));
 
     for(int i = 0; i < n; i++){
         if(max < arr[i] + arr[(2 * n - 1)- i]){
