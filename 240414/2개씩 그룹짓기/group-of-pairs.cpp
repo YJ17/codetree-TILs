@@ -8,7 +8,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     int n, max = -1;
-    int arr[1000];
+    int arr[2000];
 
     cin >> n;
 
