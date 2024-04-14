@@ -18,7 +18,7 @@ int main() {
 
     sort(arr, arr + (2 * n));
 
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i <= n - 1; i++){
         if(max < arr[i] + arr[(2 * n - 1)- i]){
             max = arr[i] + arr[(2 * n - 1)- i];
         }
