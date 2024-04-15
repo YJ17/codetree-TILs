@@ -4,8 +4,7 @@ using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
-
-    int offset = 100;
+    
     int n, x1, x2, max = 0;
     int arr[201] = {};
 
