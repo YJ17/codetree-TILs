@@ -9,8 +9,8 @@ int main() {
 
     cin >> a >> b >> c;
 
-    if(a <= 11){
-        if(b <= 11){
+    if(a == 11){
+        if(b == 11){
             if(c < 11){
                 cout << -1;
             }
