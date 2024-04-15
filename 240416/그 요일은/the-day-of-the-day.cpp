@@ -15,7 +15,7 @@ int WhatDate(int a, int b){
 int WhatDayNum(string wd, int cal){
     string day[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     int c = 0, res = 0;
-    for(int i = 0; i < 6; i++){
+    for(int i = 0; i < 7; i++){
         if(wd == day[i]){
             c = i;
         }
