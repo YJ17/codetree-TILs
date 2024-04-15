@@ -17,6 +17,18 @@ class Dot {
 };
 
 bool cmp(const Dot &a, const Dot &b){
+    if(a.x < 0){
+        if(a.y < 0){
+            if(b.x < 0){
+                if(b.y < 0){
+                    return (-a.x) + (-a.y) < (-b.x) + (-b.y);
+                }
+                return (-a.x) + (-a.y) < (-b.x) + b.y;
+            }
+            return (-a.x) + (-a.y) < b.x + b.y;
+        }
+        return (-a.x) + a.y < b.x + b.y;
+    }
     return a.x + a.y < b.x + b.y;
 }
 
