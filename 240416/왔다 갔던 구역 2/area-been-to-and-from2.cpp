@@ -7,15 +7,15 @@ int main() {
 
     int n, x, count = 0;
     char d;
-    int arr[10];
-    int index = 0;
+    int arr[1001] = {};
+    int index = 500;
 
     cin >> n;
 
     for(int i = 0; i < n; i++){
         cin >> x >> d;
 
-        for(int i = 0; i < x - 1; i++){
+        for(int i = 0; i < x; i++){
             if(d == 'R'){
                 arr[index++] += 1;
             }
@@ -25,7 +25,7 @@ int main() {
         }
     }
 
-    for(int i = 0; i <= 10; i++){
+    for(int i = 0; i <= 1000; i++){
         if(arr[i] >= 2){
             count++;
         }
