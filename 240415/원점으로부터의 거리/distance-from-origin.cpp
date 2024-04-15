@@ -6,30 +6,21 @@ using namespace std;
 class Dot {
     public :
         int x, y, number;
+        int disx, disy;
 
-        Dot(int x, int y, int number){
+        Dot(int x, int y, int number, int disx, int disy){
             this->x = x;
             this->y = y;
             this->number = number;
+            this->disx = disx;
+            this->disy = disy;
         }
 
         Dot() {}
 };
 
 bool cmp(const Dot &a, const Dot &b){
-    if(a.x < 0){
-        if(a.y < 0){
-            if(b.x < 0){
-                if(b.y < 0){
-                    return (-a.x) + (-a.y) < (-b.x) + (-b.y);
-                }
-                return (-a.x) + (-a.y) < (-b.x) + b.y;
-            }
-            return (-a.x) + (-a.y) < b.x + b.y;
-        }
-        return (-a.x) + a.y < b.x + b.y;
-    }
-    return a.x + a.y < b.x + b.y;
+    return a.disx + a.disy < b.disx + b.disy;
 }
 
 int main() {
@@ -43,6 +34,19 @@ int main() {
     for(int i = 0; i < n; i++){
         cin >> dots[i].x >> dots[i].y;
         dots[i].number = i + 1;
+        if(dots[i].x < 0){
+            dots[i].disx = -dots[i].x;
+        }
+        else {
+            dots[i].disx = dots[i].x;
+        }
+
+        if(dots[i].y < 0){
+            dots[i].disy = -dots[i].y;
+        }
+        else{
+            dots[i].disy = dots[i].y;
+        }
     }
 
     sort(dots, dots + n, cmp);
