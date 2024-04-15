@@ -21,7 +21,12 @@ int main() {
     }
     date2 += d2;
 
-    cout << date2 - date1;
+    if(date2 - date1 == 0){
+        cout << 1;
+    }
+    else {
+        cout << date2 - date1;
+    }
 
     return 0;
 }
