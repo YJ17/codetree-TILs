@@ -11,22 +11,17 @@ int main() {
 
     cin >> m1 >> d1 >> m2 >> d2;
 
-    for(int i = 0; i < m1; i++){
+    for(int i = 0; i < m1-1; i++){
         date1 += month_date[i];
     }
     date1 += d1;
 
-    for(int i = 0; i < m2; i++){
+    for(int i = 0; i < m2-1; i++){
         date2 += month_date[i];
     }
     date2 += d2;
 
-    if(date2 - date1 == 0){
-        cout << 1;
-    }
-    else {
-        cout << date2 - date1;
-    }
+    cout << date2 - date1 + 1;
 
     return 0;
 }
