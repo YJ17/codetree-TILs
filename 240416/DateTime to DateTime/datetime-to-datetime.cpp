@@ -14,6 +14,9 @@ int main() {
             if(c < 11){
                 cout << -1;
             }
+            else if (c == 11){
+                cout << 0;
+            }
         }
         else if(b < 11){
             cout << -1;
@@ -23,7 +26,7 @@ int main() {
     else if(a < 11){
         cout << -1;
     }
-    else if(a - 11){
+    else if(a - 11 > 0){
         cout << (((a-11)*24)*60) + (b * 60 + c) - (11 * 60 + 11);
     }
     else {
