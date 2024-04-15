@@ -5,32 +5,17 @@ using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    int a, b, c;
+    int a, b, c, cal;
 
     cin >> a >> b >> c;
 
-    if(a == 11){
-        if(b == 11){
-            if(c < 11){
-                cout << -1;
-            }
-            else if (c == 11){
-                cout << 0;
-            }
-        }
-        else if(b < 11){
-            cout << -1;
-        }
-        
-    }
-    else if(a < 11){
+    cal = (a * 24 * 60 + b * 60 + c) - (11 * 24 * 60 + 11 * 60 + 11);
+
+    if(cal < 0){
         cout << -1;
     }
-    else if(a - 11 > 0){
-        cout << (((a-11)*24)*60) + (b * 60 + c) - (11 * 60 + 11);
-    }
     else {
-        cout << (b * 60 + c) - (11 * 60 + 11);
+        cout << cal;
     }
 
     return 0;
