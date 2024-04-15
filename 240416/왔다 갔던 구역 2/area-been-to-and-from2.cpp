@@ -7,8 +7,8 @@ int main() {
 
     int n, x, count = 0;
     char d;
-    int arr[1001] = {};
-    int index = 500;
+    int arr[2000] = {};
+    int index = 1000;
 
     cin >> n;
 
