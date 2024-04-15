@@ -22,6 +22,9 @@ class Dot {
 bool cmp(const Dot &a, const Dot &b){
     if(a.disx + a.disy == b.disx + b.disy){
         if(a.disx == b.disx){
+            if(a.disy == b.disy){
+                return a.number < b.number;
+            }
             return a.disy < b.disy;
         }
         return a.disx < b.disx;
