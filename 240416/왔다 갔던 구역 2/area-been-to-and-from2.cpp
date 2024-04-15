@@ -25,7 +25,7 @@ int main() {
         }
     }
 
-    for(int i = 0; i <= 1000; i++){
+    for(int i = 0; i <= 2000; i++){
         if(arr[i] >= 2){
             count++;
         }
