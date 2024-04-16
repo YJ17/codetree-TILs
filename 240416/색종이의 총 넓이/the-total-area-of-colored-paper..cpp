@@ -16,6 +16,9 @@ int main() {
     for(int i = 0; i < n; i++){
         cin >> x1 >> y1;
 
+        x1 += OFFSET;
+        y1 += OFFSET;
+
         for(int x = x1; x < x1 + 8; x++){
             for(int y = y1; y < y1 + 8; y++){
                 grid[x][y] = 1;
