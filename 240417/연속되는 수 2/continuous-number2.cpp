@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    int n, count = 0, max = 1;
+    int n, count = 0, max = 0;
     int arr[MAX_NUM + 1];
 
     cin >> n;
@@ -21,10 +21,11 @@ int main() {
             count++;
         }
         else if(arr[i] != arr[i - 1]) {
-            if(max < count){
-                max = count;
-            }
             count = 1;
+        }
+
+        if(max < count){
+            max = count;
         }
     }
 
