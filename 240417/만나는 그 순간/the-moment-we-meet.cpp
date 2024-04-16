@@ -6,11 +6,11 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     int n, m, t, s = 0, a_i = 0, b_i = 0;
-    int a[100000], b[100000];
+    int a[1000000], b[1000000];
     char d;
     bool connect = false;
 
-    for(int i = 0; i < 100000; i++){
+    for(int i = 0; i < 1000000; i++){
         a[i] = b[i] = -100000;
     }
 
