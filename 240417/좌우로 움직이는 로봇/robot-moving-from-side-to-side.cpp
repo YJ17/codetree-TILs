@@ -48,14 +48,17 @@ int main() {
         }
     }
 
+
     if(a_time > b_time){
-        for(int i = 0; i < a_time - b_time; i++){
+        int sub = a_time - b_time;
+        for(int i = 0; i < sub; i++){
             b_mov[b_time] = b_mov[b_time - 1];
             b_time++;
         }
     }
     else{
-        for(int i = 0; i < b_time - a_time; i++){
+        int sub = b_time - a_time;
+        for(int i = 0; i < sub; i++){
             a_mov[a_time] = a_mov[a_time - 1];
             a_time++;
         }
