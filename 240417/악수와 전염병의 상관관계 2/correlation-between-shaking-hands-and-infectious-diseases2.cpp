@@ -63,7 +63,7 @@ int main() {
                 dev_list[covid_list[i].x].sh_num -= 1;
             }
             if(dev_list[covid_list[i].y].sh_num != 0){
-                dev_list[covid_list[i].x].sh_num -= 1;
+                dev_list[covid_list[i].y].sh_num -= 1;
             }
         }
         else if(dev_list[covid_list[i].x].state == 1){
