@@ -45,6 +45,7 @@ int main() {
     }
 
     s = 0;
+    index = 0;
     for(int i = 0; i < m; i++){
         cin >> d >> t;
 
