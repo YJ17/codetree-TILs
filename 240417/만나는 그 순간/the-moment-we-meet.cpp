@@ -1,18 +1,15 @@
 #include <iostream>
 
+#define MAX_LEN 1000000
+
 using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    int n, m, t, s = 0, a_i = 0, b_i = 0;
-    int a[1000001], b[1000001];
+    int n, m, t, s = 0, index = 0, meet = -1;
+    int a[MAX_LEN + 1], b[MAX_LEN + 1];
     char d;
-    bool connect = false;
-
-    for(int i = 0; i < 1000001; i++){
-        a[i] = b[i] = -1000001;
-    }
 
     cin >> n >> m;
 
@@ -30,19 +27,19 @@ int main() {
         if(d == 'R'){
             for(s; s <= t; s++){
                 if(s != 0){
-                    a_i = a[s - 1] + 1;
+                    index = a[s - 1] + 1;
                 }
 
-                a[s] = a_i;
+                a[s] = index;
             }
         }
         else {
             for(s; s <= t; s++){
                 if(s != 0){
-                    a_i = a[s - 1] - 1;
+                    index = a[s - 1] - 1;
                 }
                 
-                a[s] = a_i;
+                a[s] = index;
             }
         }
     }
@@ -61,37 +58,31 @@ int main() {
         if(d == 'R'){
             for(s; s <= t; s++){
                 if(s != 0){
-                    b_i = b[s - 1] + 1;
+                    index = b[s - 1] + 1;
                 }
 
-                b[s] = b_i;
+                b[s] = index;
             }
         }
         else {
             for(s; s <= t; s++){
                 if(s != 0){
-                    b_i = b[s - 1] - 1;
+                    index = b[s - 1] - 1;
                 }
                 
-                b[s] = b_i;
+                b[s] = index;
             }
         }
     }
 
-    for(int i = 1; i < 1000001; i++){
-        if(a[i] != -1000001 && b[i] != -1000001 && a[i] == b[i]){
-            cout << i;
-            connect = true;
-            break;
-        }
-        else if(a[i] == -1000001 && b[i] == -1000001){
+    for(int i = 1; i < s; i++){
+        if(a[i] == b[i]){
+            meet = i;
             break;
         }
     }
 
-    if(connect != true){
-        cout << -1;
-    }
+    cout << meet;
 
     return 0;
 }
