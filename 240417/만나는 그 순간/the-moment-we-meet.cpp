@@ -6,12 +6,12 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     int n, m, t, s = 0, a_i = 0, b_i = 0;
-    int a[1000000], b[1000000];
+    int a[1000001], b[1000001];
     char d;
     bool connect = false;
 
-    for(int i = 0; i < 1000000; i++){
-        a[i] = b[i] = -100000;
+    for(int i = 0; i < 1000001; i++){
+        a[i] = b[i] = -1000001;
     }
 
     cin >> n >> m;
@@ -78,13 +78,13 @@ int main() {
         }
     }
 
-    for(int i = 1; i < 1000; i++){
-        if(a[i] != -100000 && b[i] != -100000 && a[i] == b[i]){
+    for(int i = 1; i < 1000001; i++){
+        if(a[i] != -1000001 && b[i] != -1000001 && a[i] == b[i]){
             cout << i;
             connect = true;
             break;
         }
-        else if(a[i] == -100000 && b[i] == -100000){
+        else if(a[i] == -1000001 && b[i] == -1000001){
             break;
         }
     }
