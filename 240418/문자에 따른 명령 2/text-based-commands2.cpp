@@ -1,7 +1,5 @@
 #include <iostream>
-#include <vector>
-
-#define MAX_LEN 100000
+#include <string>
 
 using namespace std;
 
@@ -10,11 +8,11 @@ int main() {
 
     int dx[4] = {0, 1, 0, -1}, dy[4] = {1, 0, -1, 0};
     int x = 0, y = 0, dir_n = 0;
-    char quest[MAX_LEN + 1];
+    string quest;
 
     cin >> quest;
 
-    for(int i = 0; quest[i] != '\0'; i++){
+    for(int i = 0; i < quest.length(); i++){
         if(quest[i] == 'L'){
             dir_n = (dir_n + 3) % 4;
         }
