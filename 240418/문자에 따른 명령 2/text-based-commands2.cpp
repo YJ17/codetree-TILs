@@ -22,8 +22,8 @@ int main() {
             dir_n = (dir_n + 1) % 4;
         }
         else {
-            x = dx[dir_n];
-            y = dy[dir_n];
+            x += dx[dir_n];
+            y += dy[dir_n];
         }
     }
 
