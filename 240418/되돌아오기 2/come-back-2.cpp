@@ -8,7 +8,7 @@ int dx[4] = {0, 1, 0, -1}, dy[4] = {1, 0, -1, 0};
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    int x = 0, y = 0, dir = 0, i = 0;
+    int x = 0, y = 0, dir = 0, i = 0, answer = -1;
     string quest;
 
     cin >> quest;
@@ -26,15 +26,16 @@ int main() {
         }
 
         if(x == 0 && y == 0){
+            answer = i + 1;
             break;
         }
     }
 
-    if(i == (int)quest.size() - 1){
+    if(answer == - 1){
         cout << -1;
     }
     else {
-        cout << i + 1;
+        cout << answer;
     }
 
     return 0;
