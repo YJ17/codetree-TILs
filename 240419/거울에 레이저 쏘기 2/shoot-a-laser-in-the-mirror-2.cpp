@@ -10,7 +10,7 @@ int SetInit(int &x, int &y, int &d){
     if((double)d / n <= 1){
         x = 0;
         y = d - 1;
-        return 3;
+        return 0;
     }
     else if((double)d / n <= 2){
         x = (d - 1) % n;
@@ -20,7 +20,7 @@ int SetInit(int &x, int &y, int &d){
     else if((double)d / n <= 3){
         x = n - 1;
         y = (2 - (d - 1) % n);
-        return 0;
+        return 3;
     }
     else {
         x = (2 - (d - 1) % n);
@@ -34,7 +34,7 @@ bool InRange(int x, int y){
 }
 
 int LazerOn(int i, int j, int dir){
-    if(dir == 3){
+    if(dir == 0){
         if(grid[i][j] == '/'){
             return 2;
 
@@ -45,15 +45,15 @@ int LazerOn(int i, int j, int dir){
     }
     else if(dir == 2){
          if(grid[i][j] == '/'){
-            return 3;
+            return 0;
 
         }
         else {
-            return 0;
+            return 3;
         }
  
     }
-    else if(dir == 0){
+    else if(dir == 3){
          if(grid[i][j] == '/'){
             return 1;
 
@@ -64,18 +64,18 @@ int LazerOn(int i, int j, int dir){
     }
     else {
          if(grid[i][j] == '/'){
-            return 0;
+            return 3;
 
         }
         else {
-            return 3;
+            return 0;
         }
     }
 }
 
 int CountMov(int d){
     int dir, x = 0, y = 0;
-    int count = 1;
+    int count = 0;
 
     dir = SetInit(x, y, d);
 
