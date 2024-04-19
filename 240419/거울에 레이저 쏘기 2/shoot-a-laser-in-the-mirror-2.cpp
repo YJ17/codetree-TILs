@@ -19,11 +19,11 @@ int SetInit(int &x, int &y, int &d){
     }
     else if((double)d / n <= 3){
         x = n - 1;
-        y = (2 - (d - 1) % n);
+        y = ((n - 1) - (d - 1) % n);
         return 3;
     }
     else {
-        x = (2 - (d - 1) % n);
+        x = ((n - 1) - (d - 1) % n);
         y = 0;
         return 1;
     }
