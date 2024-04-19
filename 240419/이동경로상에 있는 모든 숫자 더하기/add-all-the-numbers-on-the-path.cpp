@@ -14,8 +14,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     string quest;
     int grid[100][100];
-    int answer[100][100] = {};
-    int x, y, dir = 0, t;
+    int x, y, dir = 0, t, sum = 0;
 
     cin >> n >> t;
     cin >> quest;
@@ -27,7 +26,7 @@ int main() {
     }
 
     x = y = n / 2;
-    answer[x][y] = 1;
+    sum += grid[x][y];
 
     for(int i = 0; i < t; i++){
         if(quest[i] == 'L'){
@@ -42,17 +41,7 @@ int main() {
             if(InRange(tx, ty)){
                 x = tx;
                 y = ty;
-                answer[x][y] = 1;
-            }
-        }
-    }
-
-    int sum = 0;
-
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(answer[i][j] == 1){
-                sum += grid[i][j];
+                sum += grid[x][y];
             }
         }
     }
