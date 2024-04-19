@@ -6,23 +6,16 @@ int dx[4] = {0, -1, 0, 1}, dy[4] = {1, 0, -1, 0};
 int range_s;
 
 bool InRange(int x, int y, int n){
-    if(n <= 9){
-            return x >= range_s - 1 && x <= range_s + 1 && y >= range_s - 1 && y <= range_s + 1;
+    int c = 0;
+    for(int i = 3; i <= 100; i+=2){
+        c++;
+        if(n <= (i * i)){
+            break;
         }
-        else if(n <= 25){
-            return x >= range_s - 2 && x <= range_s + 2 && y >= range_s - 2 && y <= range_s + 2;
-        }
-        else if(n <= 49){
-            return x >= range_s - 3 && x <= range_s + 3 && y >= range_s - 3 && y <= range_s + 3;
-        }
-        else if(n <= 81){
-            return x >= range_s - 4 && x <= range_s + 4 && y >= range_s - 4 && y <= range_s + 4;
-        }
-        else {
-            return x >= range_s - 5 && x <= range_s + 5 && y >= range_s - 5 && y <= range_s + 5;
-        }
+    }
 
-    return x >= 0 && x < n && y >= 0 && y < n;
+    return x >= range_s - c && x <= range_s + c && y >= range_s - c && y <= range_s + c;
+
 }
 
 int main() {
@@ -41,6 +34,7 @@ int main() {
     for(int i = 1; i < n * n; i++){
         int tx = x + dx[dir];
         int ty = y + dy[dir];
+
         if(InRange(tx, ty, num) != true || grid[tx][ty] != 0){
             dir = (dir + 1) % 4;
             tx = x + dx[dir];
