@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <climits>
 
 using namespace std;
 
@@ -8,7 +7,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     string a;
-    int num = 0, max = INT_MIN;
+    int num = 0, max = 0;
 
     cin >> a;
 
