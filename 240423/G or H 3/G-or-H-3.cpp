@@ -23,12 +23,20 @@ int main() {
         }
     }
 
-    for(int i = 1; i < max_i - k + 1; i++){
-        for(int j = i; j <= i + k; j++){
-            sum += score[j];
+    if(max_i < k){
+        for(int i = 1; i <= max_i; i++){
+            sum += score[i];
         }
-        max_val = max(sum, max_val);
-        sum = 0;
+        max_val = sum;
+    }
+    else {
+        for(int i = 1; i < max_i - k + 1; i++){
+            for(int j = i; j <= i + k; j++){
+                sum += score[j];
+            }
+            max_val = max(sum, max_val);
+            sum = 0;
+        }
     }
 
     cout << max_val;
