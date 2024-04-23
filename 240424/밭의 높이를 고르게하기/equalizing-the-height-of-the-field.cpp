@@ -1,11 +1,12 @@
 #include <iostream>
+#include <climits>
 
 using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    int n, h, t, cost = 0, min = 200;
+    int n, h, t, cost = 0, min = INT_MAX;
     int arr[101];
 
     cin >> n >> h >> t;
