@@ -23,7 +23,7 @@ bool cmp(const People &a, const People &b){
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    int n, max_len = -1, gc = 0, hc = 0;
+    int n, max_len = 0, gc = 0, hc = 0;
     People p_list[101];
 
     cin >> n;
