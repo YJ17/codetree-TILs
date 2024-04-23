@@ -39,10 +39,10 @@ int main() {
                     if(max < count1 + count2){
                         max = count1 + count2;
                     }
-                    count1 = 0;
                     count2 = 0;
                 }
             }
+            count1 = 0;
         }
     }
     
