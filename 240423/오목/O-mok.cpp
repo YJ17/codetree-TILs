@@ -45,7 +45,10 @@ int main() {
         }
     }
 
-    cout << winner << endl << cx << " " << cy;
+    cout << winner;
+    if(winner != 0){
+        cout << endl << cx << " " << cy;
+    }
 
     return 0;
 }
