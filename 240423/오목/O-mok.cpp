@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+int dx[8] = {1, 0, -1, 0, -1, 1, -1, 1}, dy[8] = {0, 1, 0, -1, -1, 1, 1, -1};
 
 bool InRange(int x, int y){
     return x >= 0 && x < 20 && y >=0 && y < 20;
@@ -22,7 +22,7 @@ int main() {
 
     for(int i = 0; i < 19; i++){
         for(int j = 0; j < 19; j++){
-            for(int d = 0; d < 4; d++){
+            for(int d = 0; d < 8; d++){
                 if(grid[i][j] != 0 && grid[i + dx[d]][j + dy[d]] == grid[i][j]){
                     count = 0;
                     tx = i;
