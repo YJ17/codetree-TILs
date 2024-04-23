@@ -22,15 +22,15 @@ int main() {
         }
     }
 
-    for(int i = 0; i < n-1; i++){
+    for(int i = 0; i < n; i++){
         for(int j = 0; j < n-2; j++){
             for(int u = 0; u < 3; u++){
                 if(InRange(i, j + u) && grid[i][j + u] != 0){
                     count1++;
                 }
             }
-            for(int k = i + 1; k < n; k++){
-                for(int p = 0; p < n-2; p++){
+            for(int k = 0; k < n; k++){
+                for(int p = j + 1; p < n-2; p++){
                     for(int t = 0; t < 3; t++){
                         if(InRange(k, p + t) && grid[k][p + t] != 0){
                             count2++;
