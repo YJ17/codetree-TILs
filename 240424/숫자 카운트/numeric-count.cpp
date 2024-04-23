@@ -73,7 +73,7 @@ int main() {
         for(int j = 1; j <= 9; j++){
             for(int k = 1; k <= 9; k++){
                 for(int q = 0; q < n; q++){
-                    if(q_check(i, j, k, q)){
+                    if(i != j && j != k && k != i && q_check(i, j, k, q)){
                         q_check_num++;
                     }
                 }
