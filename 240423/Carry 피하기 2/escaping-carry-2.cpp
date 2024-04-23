@@ -34,9 +34,9 @@ int main() {
             for(int j = k + 1; j < n; j++){
                 if(IsNotCarry(arr[i], arr[k], arr[j])){
                     sum = arr[i] + arr[k] + arr[j];
-                }
-                if(max < sum){
+                    if(max < sum){
                     max = sum;
+                    }
                 }
                 sum = 0;
             }
