@@ -29,18 +29,14 @@ int main() {
                 tx = i;
                 ty = j;
                 for(int d = 0; d < 8; d++){
-                    tx = tx + dx[d];
-                    ty = ty + dy[d];
+                    tx = i + dx[d];
+                    ty = j + dy[d];
                     if(InRange(tx, ty) && arr[tx][ty] == 'E'){
-                        tx = tx + dx[d];
-                        ty = ty + dy[d];
-                        if(InRange(tx, ty) && arr[tx][ty] == 'E'){
+                        int ttx = tx + dx[d];
+                        int tty = ty + dy[d];
+                        if(InRange(ttx, tty) && arr[ttx][tty] == 'E'){
                             count++;
                         }
-                    }
-                    else{
-                        tx = i;
-                        ty = j;
                     }
                 }
             }
