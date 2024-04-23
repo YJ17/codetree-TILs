@@ -8,9 +8,9 @@ int n;
 bool IsIn2(int x, int y){
     int sub1, sub2, min_sub;
 
-    sub1 = n - x + y;
+    sub1 = (x >= y) ? n - x + y : n - y + x;
 
-    sub2 = (x > y) ? x - y : y - x;
+    sub2 = (x >= y) ? x - y : y - x;
 
     min_sub = min(sub1, sub2);
 
