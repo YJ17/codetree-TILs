@@ -13,7 +13,7 @@ int main() {
 
     for(int i = 0; i < n; i++){
         cin >> candy >> index;
-        arr[index] = candy;
+        arr[index] += candy;
     }
 
     for(int i = k; i <= 100 - k; i++){
