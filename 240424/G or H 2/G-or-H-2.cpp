@@ -44,7 +44,7 @@ int main() {
                     hc++;
                 }
             }
-            if(gc == hc){
+            if(gc == hc || hc == 0 || gc == 0){
                 max_len = max(max_len, p_list[j].index - p_list[i].index);
             }
             gc = hc = 0;
