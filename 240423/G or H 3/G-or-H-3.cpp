@@ -7,7 +7,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     int n, k, index, max_i = 0, sum = 0, max_val = -1;
-    int score[150] = {};
+    int score[10001] = {};
     char q;
 
     cin >> n >> k;
