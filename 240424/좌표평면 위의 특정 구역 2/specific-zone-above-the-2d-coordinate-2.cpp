@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    int n, answer = MAX_NUM * 2;
+    int n, answer = MAX_NUM * MAX_NUM;
     int xy[101][2];
 
     cin >> n;
