@@ -1,12 +1,14 @@
 #include <iostream>
 #include <algorithm>
 
+#define MAXINDEX 50000
+
 using namespace std;
 
 class EatCheeseSec{
     public :
-        int p_num[51] = {};
-        int ch_num[51] = {};
+        int p_num[MAXINDEX + 1] = {};
+        int ch_num[MAXINDEX + 1] = {};
 
         EatCheeseSec() {}
 };
@@ -47,7 +49,7 @@ int main() {
             if(ache_list[i].p_num[a] != 0){
                 int already_eat[51] = {};
                 for(int j = 1; j < i; j++){
-                    for(int k = 0; k < 51; k++){
+                    for(int k = 0; k < MAXINDEX + 1; k++){
                         if(eat_list[j].p_num[k] == ache_list[i].p_num[a] && already_eat[eat_list[j].ch_num[k]] == 0){
                             cheese_list[eat_list[j].ch_num[k]] += 1;
                             already_eat[eat_list[j].ch_num[k]] = 1;
@@ -63,7 +65,7 @@ int main() {
             int count = 0;
             int ache_person_list[51] = {};
             for(int j = 1; j < 101; j++){
-                for(int k = 0; k < 51; k++){
+                for(int k = 0; k < MAXINDEX + 1; k++){
                     if(eat_list[j].ch_num[k] == i){
                         ache_person_list[eat_list[j].p_num[k]] = 1;
                     }
