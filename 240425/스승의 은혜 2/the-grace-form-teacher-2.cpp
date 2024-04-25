@@ -24,15 +24,12 @@ int main() {
             else {
                 sum += cost_list[j];
             }
-            count++;
 
-            if(sum > b){
-                answer = max(answer, count - 1);
+            if(sum <= b){
+                count++;
             }
         }
-        if(sum <= b){
-            answer = n;
-        }
+        answer = max(answer, count);
     }
 
     cout << answer;
