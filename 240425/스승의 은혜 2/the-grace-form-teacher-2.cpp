@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -13,6 +14,8 @@ int main() {
     for(int i = 0; i < n; i++){
         cin >> cost_list[i];
     }
+
+    sort(cost_list, cost_list + n);
 
     for(int i = 0; i < n; i++){
         int sum = 0;
