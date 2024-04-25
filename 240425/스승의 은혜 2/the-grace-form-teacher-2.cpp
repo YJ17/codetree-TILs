@@ -30,6 +30,9 @@ int main() {
                 answer = max(answer, count - 1);
             }
         }
+        if(sum <= b){
+            answer = n;
+        }
     }
 
     cout << answer;
