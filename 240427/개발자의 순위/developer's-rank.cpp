@@ -19,7 +19,7 @@ int main() {
 
 
     for(int i = 1; i <= n; i++){
-        int bottom[20] = {};
+        int bottom[21] = {};
         for(int a = 0; a < k; a++){
             int index = -1;
             for(int b = 0; b < n; b++){
