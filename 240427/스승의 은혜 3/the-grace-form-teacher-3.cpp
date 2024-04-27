@@ -17,7 +17,7 @@ class PresentFee{
 };
 
 bool cmp(const PresentFee &a, const PresentFee &b){
-    return a.present < b.present;
+    return (a.present + a.sendfee) < (b.present + b.sendfee);
 }
 
 int main() {
