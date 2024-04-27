@@ -17,13 +17,13 @@ class PresentFee{
 };
 
 bool cmp(const PresentFee &a, const PresentFee &b){
-    if((a.present + a.sendfee) == (b.present + b.sendfee)){
+    if(((a.present/2) + a.sendfee) == ((b.present/2) + b.sendfee)){
         if(a.present == b.present){
             return a.sendfee < b.sendfee;
         }
         return a.present < b.present;
     }
-    return (a.present + a.sendfee) < (b.present + b.sendfee);
+    return ((a.present/2) + a.sendfee) < ((b.present/2) + b.sendfee);
 }
 
 int main() {
