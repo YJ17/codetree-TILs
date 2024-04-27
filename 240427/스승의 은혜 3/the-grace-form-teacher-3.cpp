@@ -24,7 +24,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     int n, b, answer = -1;
-    PresentFee present_list[1001];
+    PresentFee present_list[1500];
 
 
     cin >> n >> b;
