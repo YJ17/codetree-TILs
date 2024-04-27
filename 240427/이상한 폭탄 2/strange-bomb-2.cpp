@@ -14,8 +14,12 @@ int main() {
         cin >> arr[i];
     }
 
-    for(int i = 0; i <= n - k; i++){
-        for(int j = i + 1; j < i + 1 + k; j++){
+    for(int i = 0; i <= n; i++){
+        int len = i + 1 + k;
+        if(len > n){
+            len = n;
+        }
+        for(int j = i + 1; j < len; j++){
             if(arr[i] == arr[j]){
                 max_bom = max(max_bom, arr[i]);
             }
