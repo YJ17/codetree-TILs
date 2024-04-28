@@ -14,7 +14,7 @@ int main() {
         int count = 0;
         int num = i;
         while(num != 0){
-            diff[num % 10] = 1;
+            diff[num % 10] += 1;
             num /= 10;
         }
 
@@ -22,10 +22,9 @@ int main() {
             if(diff[i] == 1){
                 count++;
             }
-
         }
 
-        if(count == 2){
+        if(count == 1){
             answer++;
         }
     }
