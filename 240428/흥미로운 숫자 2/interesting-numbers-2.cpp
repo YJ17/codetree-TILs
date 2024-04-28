@@ -11,7 +11,7 @@ int main() {
 
     for(int i = x; i <= y; i++){
         int diff[10] = {};
-        int count = 0;
+        int cn = 0, c1 = 0;
         int num = i;
         while(num != 0){
             diff[num % 10] += 1;
@@ -19,12 +19,15 @@ int main() {
         }
 
         for(int i = 0; i < 10; i++){
+            if(diff[i] != 0){
+                cn++;
+            }
             if(diff[i] == 1){
-                count++;
+                c1++;
             }
         }
 
-        if(count == 1){
+        if(cn == 2 && c1 == 1){
             answer++;
         }
     }
