@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -15,13 +16,15 @@ int main() {
     }
 
     for(int i = 1; i <= 100; i++){
+        int count = 0;
         for(int j = 0; j < n - 1; j++){
             for(int k = j + 1; k < n; k++){
                 if(arr[k] - i == i - arr[j]){
-                    answer++;
+                    count++;
                 }
             }
         }
+        answer = max(answer, count);
     }
 
     cout << answer;
