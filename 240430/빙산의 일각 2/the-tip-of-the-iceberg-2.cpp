@@ -18,7 +18,7 @@ int main() {
     for(int i = 1; i < 1001; i++){
         int count = 0;
         bool state = false;
-        for(int j = 1; j < n; j++){
+        for(int j = 0; j < n; j++){
             if(hight[j] > i){
                 if(state != true){
                     state = true;
