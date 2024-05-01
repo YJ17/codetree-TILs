@@ -20,17 +20,11 @@ int main() {
         suffle[0][j] = j + 1;
     }
 
-    for(int j = 0; j < n; j++){      
-        if(n % 2 == 1) {
-            int temp = suffle[j][arr[j][0] - 1];
-            suffle[j][arr[j][0] - 1] = suffle[j][arr[j][1] - 1];
-            suffle[j][arr[j][1] - 1] = temp;
-        }
-        else {
-            suffle[j][0] = arr[j][0];
-            suffle[j][1] = arr[j][1];
-            suffle[j][2] = arr[j][2];
-        }
+    for(int j = 0; j < n; j++){    
+
+        int temp = suffle[j][arr[j][0] - 1];
+        suffle[j][arr[j][0] - 1] = suffle[j][arr[j][1] - 1];
+        suffle[j][arr[j][1] - 1] = temp;
 
         if(j + 1 < n){
             suffle[j + 1][0] = suffle[j][0];
