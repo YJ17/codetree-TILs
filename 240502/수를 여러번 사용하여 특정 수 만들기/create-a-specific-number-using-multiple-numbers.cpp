@@ -10,8 +10,8 @@ int main() {
 
     cin >> a >> b >> c;
 
-    for(int i = 1; i <= 100; i++){
-        for(int j = 1; j <= 100; j++){
+    for(int i = 0; i <= 1000; i++){
+        for(int j = 0; j <= 1000; j++){
             int sum = a * i + b * j;
             if(sum <= c){
                 answer = max(answer, sum);
