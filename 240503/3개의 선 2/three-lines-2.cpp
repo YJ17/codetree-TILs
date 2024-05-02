@@ -21,7 +21,7 @@ int main() {
 
     for(int i = 0; i < n - 1; i++){
         for(int j = i + 1; j < n; j++){
-            if(arr[i][0] == arr[j][0] && checkx[i] == 0){
+            if(arr[i][0] == arr[j][0] && (checkx[i] == 0 || checkx[j] == 0)){
                 checkx[i] = 1;
                 checkx[j] = 1;
             }
@@ -43,7 +43,7 @@ int main() {
     else {
         for(int i = 0; i < n - 1; i++){
             for(int j = i + 1; j < n; j++){
-                if(arr[i][1] == arr[j][1] && checky[i] == 0){
+                if(arr[i][1] == arr[j][1] && (checky[i] == 0 || checky[j] == 0)){
                     checky[i] = 1;
                     checky[j] = 1;
                     
@@ -78,7 +78,7 @@ int main() {
             if(answer == 0)
                 nozero = false;
         }
-        if(countx <= 3 && county <= 3 && nozero == true){
+        if((countx < 3 || county < 3) && countx + county >= 3 && nozero == true){
             state = true;
         }
     }
