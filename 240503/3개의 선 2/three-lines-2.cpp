@@ -14,22 +14,21 @@ int main() {
         cin >> arr[i][0] >> arr[i][1];
     }
 
-    int num[21] = {};
+    int xnum[21] = {}, ynum[21] = {};
     int xcount = 0, ycount = 0;
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(i == j)
-                continue;
+    for(int i = 0; i < n - 1; i++){
+        for(int j = i + 1; j < n; j++){
 
             if(arr[i][0] == arr[j][0]){
-                if(num[arr[i][0]] == 0){
-                    num[arr[i][0]] = 1;
+                if(xnum[arr[i][0]] == 0){
+                    xnum[arr[i][0]] = 1;
                     xcount++;
                 }
             }
+
             if(arr[i][1] == arr[j][1]){
-                if(num[arr[i][1]] == 0){
-                    num[arr[i][1]] = 1;
+                if(ynum[arr[i][1]] == 0){
+                    ynum[arr[i][1]] = 1;
                     ycount++;
                 }
             }
