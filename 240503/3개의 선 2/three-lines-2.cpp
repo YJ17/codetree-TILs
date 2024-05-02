@@ -15,7 +15,7 @@ int main() {
     }
 
     int num[21] = {};
-    int count = 0;
+    int xcount = 0, ycount = 0;
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             if(i == j)
@@ -24,19 +24,19 @@ int main() {
             if(arr[i][0] == arr[j][0]){
                 if(num[arr[i][0]] == 0){
                     num[arr[i][0]] = 1;
-                    count++;
+                    xcount++;
                 }
             }
-            else if(arr[i][1] == arr[j][1]){
+            if(arr[i][1] == arr[j][1]){
                 if(num[arr[i][1]] == 0){
                     num[arr[i][1]] = 1;
-                    count++;
+                    ycount++;
                 }
             }
         }
     }
 
-    if(count == 3){
+    if(xcount == 3 || ycount == 3 || xcount + ycount == 3){
         cout << 1;
     }
     else {
