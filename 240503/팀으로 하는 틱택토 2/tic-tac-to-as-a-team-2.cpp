@@ -41,15 +41,20 @@ int main() {
                     int tx = i;
                     int ty = j;
                     for(int d = 0; d < 8; d++){
-                        int count = 0;
+                        int counta = 0;
+                        int countb = 0;
                         while(Inrange(tx, ty)){
-                            if(tictacto[tx][ty] == a || tictacto[tx][ty] == b){
-                                count++;
+                            if(tictacto[tx][ty] == a){
+                                counta++;
+                            }
+
+                            if(tictacto[tx][ty] == b){
+                                countb++;
                             }
                             tx += dx[d];
                             ty += dy[d];
                         }
-                        if(count == 3){
+                        if(counta != 3 && countb != 3 && counta + countb == 3){
                             state = true;
                         }
                         tx = i;
