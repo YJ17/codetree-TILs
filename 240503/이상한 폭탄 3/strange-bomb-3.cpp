@@ -9,21 +9,22 @@ int main() {
     int n, k, answer = 0, max_count = -1;
     int min_num = 1000001, max_num = -1;
     int arr[101];
+    int num[101] = {};
 
     cin >> n >> k;
 
+    int index = 0;
     for(int i = 0; i < n; i++){
         cin >> arr[i];
-        min_num = min(min_num, arr[i]);
-        max_num = max(max_num, arr[i]);
+        num[index++] = arr[i];
     }
 
-    for(int i = min_num; i <= max_num; i++){
+    for(int i = 0; i < index; i++){
         int bomb[101] = {};
         int count = 0;
         for(int a = 0; a < n - 1; a++){
             for(int b = a + 1; b < n; b++){
-                if(arr[a] == i && arr[b] == i){
+                if(arr[a] == num[i] && arr[b] == num[i]){
                     if(b - a <= k){
                         bomb[a] = 1;
                         bomb[b] = 1;
@@ -42,11 +43,11 @@ int main() {
         }
         else if(max_count < count){
             max_count = count;
-            answer = i;
+            answer = num[i];
         }
         else if(max_count == count){
-            if(answer < i){
-                answer = i;
+            if(answer < num[i]){
+                answer = num[i];
             }
         }
     }
