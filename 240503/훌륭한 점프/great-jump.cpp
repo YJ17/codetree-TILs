@@ -5,16 +5,17 @@ using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    int n, k, answer = 101;
+    int n, k, answer = 101, input_max = -1;
     int arr[101];
 
     cin >> n >> k;
 
     for(int i = 0; i < n; i++){
         cin >> arr[i];
+        input_max = max(input_max, arr[i]);
     }
 
-    for(int a = n; a >= 1; a--){
+    for(int a = input_max; a >= 1; a--){
         int jump[101] = {};
         int index = 0;
         int max_val = -1;
