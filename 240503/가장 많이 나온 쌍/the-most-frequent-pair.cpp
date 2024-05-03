@@ -15,10 +15,8 @@ int main() {
         cin >> ab[i][0] >> ab[i][1];
     }
 
-    for(int i = 1; i < n; i++){
-        for(int j = 1; j < n; j++){
-            if(i == j)
-                continue;
+    for(int i = 1; i <= n - 1; i++){
+        for(int j = i + 1; j <= n; j++){
             int count = 0;
             for(int k = 0; k < m; k++){
                 if((ab[k][0] == i && ab[k][1] == j) || (ab[k][0] == j && ab[k][1] == i)){
