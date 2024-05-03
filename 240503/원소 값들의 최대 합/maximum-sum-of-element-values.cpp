@@ -17,19 +17,14 @@ int main() {
     }
 
     for(int i = 0; i < n; i++){
+        int sum = 0;
         int s_index = i;
         for(int j = 0; j < m; j++){
-            mov[j] = arr[s_index];
+            sum += arr[s_index];
             s_index = arr[s_index] - 1;
         }
 
-        int sum = 0;
-        for(int j = 0; j < m; j++){
-            sum += mov[j];
-        }
-
         answer = max(answer, sum);
-
     }
 
     cout << answer;
