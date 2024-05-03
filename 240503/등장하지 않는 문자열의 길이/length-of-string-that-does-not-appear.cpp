@@ -33,7 +33,7 @@ int main() {
             if(count != 1){
                 len[(int)sub.size()] = 2;
             }
-            else if(count == 1 && len[j] != 2){
+            else if(count == 1 && len[(int)sub.size()] != 2){
                 len[(int)sub.size()] = 1;
             }
         }
