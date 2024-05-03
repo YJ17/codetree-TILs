@@ -17,49 +17,29 @@ int main() {
         arr_min = min(arr_min, arr[i]);
     }
 
-    int sub = arr_max - arr_min;
+    for(int i = arr_min; i <= (arr_max - arr_min) / 2; i++){
+        for(int j = arr_max; j > (arr_max - arr_min) / 2; j--){
+            int cost = 0;
+            bool Isunder17 = false;
+            for(int k = 0; k < n; k++){
+                if(j - i > 17)
+                    break;
 
-    if(sub > 17){
-        sub -= 17;
-
-        int div = 0;
-        div = sub / 2;
-        sub -= div;
-
-        int cost = div * div + sub * sub;
-        answer = min(cost, answer);
+                Isunder17 = true;
+                if(arr[k] > j){
+                    cost += (arr[k] - j) * (arr[k] - j);
+                }
+                else if(arr[k] < i){
+                    cost += (i - arr[k]) * (i - arr[k]);
+                }
+            }
+            if(Isunder17){
+                answer = min(answer, cost);
+            }
+        }
     }
-
-    // for(int i = 0; i < n - 1; i++){
-    //     for(int j = i + 1; j < n; j++){
-
-    //         int sub = 0;
-    //         if(arr[i] > arr[j]){
-    //             sub = arr[i] - arr[j];
-    //         }
-    //         else {
-    //             sub = arr[j] - arr[i];
-    //         }
-
-    //         if(sub > 17){
-    //             sub -= 17;
-
-    //             int div = 0;
-    //             div = sub / 2;
-    //             sub -= div;
-
-    //             int cost = div * div + sub * sub;
-    //             answer = min(cost, answer);
-    //         }
-    //     }
-    // }
-
-    if(answer == INT_MAX){
-        cout << 0;
-    }
-    else {
-        cout << answer;
-    }
+    
+    cout << answer;
 
     return 0;
 }
