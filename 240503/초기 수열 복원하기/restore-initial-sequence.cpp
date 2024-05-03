@@ -6,8 +6,8 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     int n;
-    int add[1001];
-    int answer[1001];
+    int add[2000];
+    int answer[2000];
 
     cin >> n;
 
@@ -16,8 +16,8 @@ int main() {
     }
 
     for(int s = 1; s <= n; s++){
-        int temp[1001] = {};
-        int num[1001] = {};
+        int temp[2000] = {};
+        int num[2000] = {};
         int t_index = 0;
         temp[t_index++] = s;
         num[s] = 1;
