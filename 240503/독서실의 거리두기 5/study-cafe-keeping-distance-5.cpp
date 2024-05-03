@@ -31,13 +31,7 @@ int main() {
             }
             else if(pre_index != -1 && seat[j] == '1'){
                 int sub_len = j - pre_index;
-                if(sub_len > 1){
-                    len = min(len, sub_len);
-                }
-                else {
-                    len = -1;
-                    break;
-                }
+                len = min(len, sub_len);
                 pre_index = j;
             }
         }
