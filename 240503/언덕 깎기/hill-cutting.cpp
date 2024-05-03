@@ -39,7 +39,12 @@ int main() {
         }
     }
     
-    cout << answer;
+    if(answer == INT_MAX){
+        cout << 0;
+    }
+    else {
+        cout << answer;
+    }
 
     return 0;
 }
