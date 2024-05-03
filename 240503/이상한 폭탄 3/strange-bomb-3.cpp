@@ -14,7 +14,7 @@ int main() {
         cin >> arr[i];
     }
 
-    for(int i = 1; i < 101; i++){
+    for(int i = 0; i <= 1000000; i++){
         int bomb[101] = {};
         int count = 0;
         for(int a = 0; a < n - 1; a++){
@@ -33,7 +33,10 @@ int main() {
             }
         }
 
-        if(max_count < count){
+        if(count == 0 && max_count == -1){
+            answer = 0;
+        }
+        else if(max_count < count){
             max_count = count;
             answer = i;
         }
