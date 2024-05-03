@@ -21,28 +21,28 @@ int main() {
             new_index = i;
         }
 
-        seat[new_index] = '2';
+        seat[new_index] = '1';
 
-        int dis_l, dis_r, big = -1;
-        for(int j = new_index - 1; j >= 0; j--){
-            if(seat[j] == '1'){
-                dis_l = new_index - j;
-                break;
+        int pre_index = -1;
+        int len = 50;
+        for(int j = 0; j < n; j++){
+            if(pre_index == -1 && seat[j] == '1'){
+                pre_index = j;
+            }
+            else if(pre_index != -1 && seat[j] == '1'){
+                int sub_len = j - pre_index;
+                if(sub_len > 1){
+                    len = min(len, sub_len);
+                }
+                else {
+                    len = -1;
+                    break;
+                }
+                pre_index = j;
             }
         }
 
-        for(int j = new_index + 1; j < n; j++){
-            if(seat[j] == '1'){
-                dis_r = j - new_index;
-                break;
-            }
-        }
-
-        if(dis_l != 1 && dis_r != 1){
-            big = max(dis_l, dis_r);
-            answer = max(big, answer);
-        }
-
+        answer = max(answer, len);
         seat[new_index] = '0';
     }
 
