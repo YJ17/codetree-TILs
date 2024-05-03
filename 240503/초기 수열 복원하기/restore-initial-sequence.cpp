@@ -6,7 +6,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
 
     int n;
-    int add[1000];
+    int add[1001];
     int answer[1001];
 
     cin >> n;
