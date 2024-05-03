@@ -32,7 +32,7 @@ int main() {
             }
         }
 
-        if(index != 1 && tolong != true){
+        if(jump[0] == 0 && jump[index - 1] == n - 1 && tolong != true){
             answer = min(answer, max_val);
         }
 
