@@ -37,6 +37,11 @@ int main() {
             max_count = count;
             answer = i;
         }
+        else if(max_count == count){
+            if(answer < i){
+                answer = i;
+            }
+        }
     }
 
     cout << answer;
