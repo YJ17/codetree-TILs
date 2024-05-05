@@ -9,10 +9,10 @@ int main() {
 
     cin >> a >> b >> c >> d;
 
-    if(a <= d){
+    if(a <= d && d <= b){
         cout << b - c;
     }
-    else if(c <= b){
+    else if(c <= b && a <= c){
         cout << d - a;
     }
 
