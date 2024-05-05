@@ -15,6 +15,9 @@ int main() {
     else if(c <= b && a <= c){
         cout << d - a;
     }
+    else {
+        cout << b - a + d - c;
+    }
 
     return 0;
 }
