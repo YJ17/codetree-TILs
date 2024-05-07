@@ -17,6 +17,12 @@ int main() {
     }
 
     for(int i = p - 1; i < m; i++){
+        if(no_read_message[i] == 0){
+            for(int j = 0; j < n; j++){
+                answer[j] = 1;
+            }
+            break;
+        }
         answer[send_person_list[i] - 'A'] = 1;
     }
 
