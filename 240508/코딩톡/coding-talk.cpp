@@ -23,7 +23,7 @@ int main() {
             }
             break;
         }
-        else if(i != 0 && no_read_message[i - 1] == no_read_message[i]){
+        else if(i != 0 && no_read_message[i - 1] >= no_read_message[i]){
             answer[send_person_list[i - 1] - 'A'] = 1;
         }
         answer[send_person_list[i] - 'A'] = 1;
