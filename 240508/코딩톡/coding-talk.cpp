@@ -24,7 +24,11 @@ int main() {
             break;
         }
         else if(i != 0 && no_read_message[i - 1] >= no_read_message[i]){
-            answer[send_person_list[i - 1] - 'A'] = 1;
+            int index = i;
+            while(no_read_message[index - 1] >= no_read_message[index]){
+                answer[send_person_list[index - 1] - 'A'] = 1;
+                index--;
+            }
         }
         answer[send_person_list[i] - 'A'] = 1;
     }
