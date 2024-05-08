@@ -13,14 +13,22 @@ int main() {
     int sec = 0;
     for(int i = 1; i <= x; i+=speed){
         sec++;
-        int dis = 0;
+        int up_dis = 0;
         for(int j = 1; j <= speed + 1; j++){
-            dis += j;
+            up_dis += j;
         }
-        if(x - i > dis){
+        int this_dis = 0;
+        for(int j = 1; j <= speed; j++){
+            this_dis += j;
+        }
+
+        if(x - i >= up_dis){
             speed++;
         }
-        else if(x - i == speed || x - i < dis){
+        else if(x - i < up_dis && x - i >= this_dis){
+            continue;
+        }
+        else if(x - i == speed || (x - i < up_dis && x - i < this_dis)){
             if(speed == 1){
                 continue;
             }
